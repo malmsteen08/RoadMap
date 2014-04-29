@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="RoadMap.css" rel="stylesheet" type="text/css" />
+<head>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href="RoadMap_1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 id="timeline">Argeset'te Staj</h1>
+        </div>
+
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            
+            var Data = [{ Title:"Argeset'te Kariyer Firsati", Desc:"Ilana Basvuru.", 
+            Title2:"Nasil Bir Stajyer Ariyoruz?",
+                        Desc2:"Telefon Mulakati.",
+                         Title3:"Staj Basvurusu", Desc3:"Yuzyuze Mulakat",
+                         CssClass:"Warning", Title4:"Baslik 4", Desc4: "Realtime kod mulakati",
+			 Title5:"Baslik5", Desc5:"Mulakat geri bildirimi", Title6:"Baslik6", Desc6:"Linux ve MonoDevelop kurulumu" ,
+			 Title7:"Baslik7", Desc7:"Git - GitHub sunumu"}];
+             
+            
+            
+            for(var i = 0 ; i < Data.length ; i++) 
+                
+                {
+                    var title = Data[i].Title;
+                    var desc = Data[i].Desc;
+                    var title2 = Data[i].Title2;
+                    var desc2 = Data[i].Desc2;
+                    var title3 = Data[i].Title3;
+                    var desc3 = Data[i].Desc3;
+		    var title4 = Data[i].Title4;
+		    var desc4 = Data[i].Desc4;
+		    var title5 = Data[i].Title5;
+		    var desc5 = Data[i].Desc5;
+		    var title6 = Data[i].Title6;
+		    var desc6 = Data[i].Desc6;
+		    var title7 = Data[i].Title7;
+		    var desc7 = Data[i].Desc7;
+                    
+										
+            $(".container").append('<ul class = "timeline"></ul>');
+            $(".timeline").append('<li class = "timeline-li"></li>');//class eklendi
+            $(".timeline-li").append('<div class = "timeline-badge"><i class="glyphicon glyphicon-check"></i></div>');
+            $(".timeline-li").append('<div class="timeline-panel"></div>');
+            $(".timeline-panel").append('<div class = "timeline-heading"></div>');
+            $(".timeline-heading").append('<h4 class = "timeline-title">'+ title +'</h4>');
+            //$(".timeline-heading").append('<p><small class = "text-muted"><i class = "glyphon glyphon-time"></i>'+sil+'</small></p>');
+            $(".timeline-panel").append('<div class = "timeline-body"><p>'+desc+'</p></div>');
+
+            $(".timeline").append('<li class = "timeline-inverted"></li>');
+            $(".timeline-inverted").append('<div class = "timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>');
+            $(".timeline-inverted").append('<div class = "timeline-panel" target="_blank"></div>');//blank eklendi!!!
+            $('<div class = "timeline-heading"></div>').appendTo(".timeline-panel");            
+            $("div[target='_blank']").append('<h4 class = "timeline-title">'+title2+'</h4>');
+            $("div.timeline-panel").append('<div class = "timeline-body"></div>');
+            $("div[target='_blank']").append('<p>'+desc2+'</p>');
+                                  
+            $(".timeline").append('<li class = "timeline-li" target="l_column2"></li>');//class eklendi
+            $("li[target='l_column2']").append('<div class = "timeline-badge"><i class="glyphicon glyphicon-check"></i></div>');
+            $("li[target='l_column2']").append('<div class="timeline-panel" target="l_column2"></div>');
+            $(".timeline-panel").append('<div class = "timeline-heading"></div>');
+            $("div[target='l_column2']").append('<h4 class = "timeline-title">'+ title3 +'</h4>');
+            //$(".timeline-heading").append('<p><small class = "text-muted"><i class = "glyphon glyphon-time"></i>'+sil+'</small></p>');
+            $("div[target='l_column2']").append('<div class = "timeline-body"><p>'+desc3+'</p></div>');
+	    
+	    $(".timeline").append('<li class = "timeline-inverted" target="r_column2"></li>');
+            $("li[target='r_column2']").append('<div class = "timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>');
+            $("li[target='r_column2']").append('<div class = "timeline-panel" target="r_column2"></div>');//blank eklendi!!!
+            $('<div class = "timeline-heading"></div>').appendTo(".timeline-panel");            
+            $("div[target='r_column2']").append('<h4 class = "timeline-title">'+title4+'</h4>');
+            $("div.timeline-panel").append('<div class = "timeline-body"></div>');
+            $("div[target='r_column2']").append('<p>'+desc4+'</p>');
+	    
+	    $(".timeline").append('<li class = "timeline-li" target="l_column3"></li>');//class eklendi
+            $("li[target='l_column3']").append('<div class = "timeline-badge"><i class="glyphicon glyphicon-check"></i></div>');
+            $("li[target='l_column3']").append('<div class="timeline-panel" target="l_column3"></div>');
+            $(".timeline-panel").append('<div class = "timeline-heading"></div>');
+            $("div[target='l_column3']").append('<h4 class = "timeline-title">'+ title5 +'</h4>');
+            //$(".timeline-heading").append('<p><small class = "text-muted"><i class = "glyphon glyphon-time"></i>'+sil+'</small></p>');
+            $("div[target='l_column3']").append('<div class = "timeline-body"><p>'+desc5+'</p></div>');
+	    
+	    $(".timeline").append('<li class = "timeline-inverted" target="r_column3"></li>');
+            $("li[target='r_column3']").append('<div class = "timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>');
+            $("li[target='r_column3']").append('<div class = "timeline-panel" target="r_column3"></div>');//blank eklendi!!!
+            $('<div class = "timeline-heading"></div>').appendTo(".timeline-panel");            
+            $("div[target='r_column3']").append('<h4 class = "timeline-title">'+title6+'</h4>');
+            $("div.timeline-panel").append('<div class = "timeline-body"></div>');
+            $("div[target='r_column3']").append('<p>'+desc6+'</p>');
+	    
+	    $(".timeline").append('<li class = "timeline-li" target="l_column4"></li>');//class eklendi
+            $("li[target='l_column4']").append('<div class = "timeline-badge"><i class="glyphicon glyphicon-check"></i></div>');
+            $("li[target='l_column4']").append('<div class="timeline-panel" target="l_column4"></div>');
+            $(".timeline-panel").append('<div class = "timeline-heading"></div>');
+            $("div[target='l_column4']").append('<h4 class = "timeline-title">'+ title7 +'</h4>');
+            //$(".timeline-heading").append('<p><small class = "text-muted"><i class = "glyphon glyphon-time"></i>'+sil+'</small></p>');
+            $("div[target='l_column4']").append('<div class = "timeline-body"><p>'+desc7+'</p></div>');
+            }            
+        });
+
+    </script>
+    
+    
+</body>
+</html>
